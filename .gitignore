@@ -4,4 +4,3 @@ chroma_store/
 __pycache__/
 *.pyc
 .DS_Store
-eval/results/
