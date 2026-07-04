@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "input": "What does RAG stand for and what problem does it solve?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "RAG stands for Retrieval-Augmented Generation. It solves the problem of LLMs producing outdated or hallucinated answers by retrieving relevant documents at query time and grounding the generation in that retrieved context.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 2,
+    "input": "What are the two main components in a RAG pipeline?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "The two main components are a retriever, which fetches relevant documents or passages from a knowledge base, and a generator (LLM), which produces an answer conditioned on the retrieved context.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 3,
+    "input": "What is the attention mechanism in transformers?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "The attention mechanism allows a model to weigh the relevance of different tokens in a sequence when producing a representation for each token. In transformers, scaled dot-product attention computes a weighted sum of values, where weights are derived from the dot product of queries and keys.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 4,
+    "input": "What does BERT stand for and what is it used for?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "BERT stands for Bidirectional Encoder Representations from Transformers. It is a pretrained language model used for NLP tasks such as question answering, named entity recognition, and sentence classification by fine-tuning on task-specific data.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 5,
+    "input": "What is the difference between encoder-only and decoder-only transformer models?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Encoder-only models like BERT process the full input bidirectionally and are used for understanding tasks. Decoder-only models like GPT generate text autoregressively, attending only to previous tokens, and are used for text generation tasks.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 6,
+    "input": "What is gradient descent and what is it used for in ML?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Gradient descent is an optimization algorithm that iteratively updates model parameters in the direction of the negative gradient of the loss function. It is used to minimize the loss and train machine learning models.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 7,
+    "input": "What is overfitting and how does it affect model generalization?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Overfitting occurs when a model learns the training data too well, including its noise and random fluctuations, resulting in poor performance on unseen data. It reduces the model's ability to generalize beyond the training set.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 8,
+    "input": "What is k-fold cross-validation?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "K-fold cross-validation is a technique where the dataset is split into k equal folds. The model is trained on k-1 folds and validated on the remaining fold, repeated k times so each fold serves as the validation set once. The results are averaged to estimate model performance.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 9,
+    "input": "How does Word2vec represent words?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Word2vec represents words as dense vector embeddings in a continuous vector space, where semantically similar words are placed close together. These vectors are learned by training a shallow neural network to predict words from context or context from words.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 10,
+    "input": "What are the two training approaches used in Word2vec?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "The two training approaches are CBOW (Continuous Bag of Words), which predicts a target word from its surrounding context words, and Skip-gram, which predicts surrounding context words given a target word.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 11,
+    "input": "What is a recurrent neural network and what makes it different from a feedforward network?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "A recurrent neural network (RNN) is a neural network that has connections forming cycles, allowing information to persist across time steps. Unlike feedforward networks, RNNs maintain a hidden state that captures information from previous inputs, making them suited for sequential data.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 12,
+    "input": "What problem do LSTMs solve compared to vanilla RNNs?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "LSTMs (Long Short-Term Memory networks) solve the vanishing gradient problem that affects vanilla RNNs. They use gating mechanisms (input, forget, and output gates) to control information flow, allowing them to learn long-range dependencies in sequences.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 13,
+    "input": "What is self-attention and why is it useful?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Self-attention is a mechanism where each token in a sequence attends to all other tokens in the same sequence to compute its representation. It is useful because it captures dependencies between tokens regardless of their distance, unlike RNNs which struggle with long-range dependencies.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 14,
+    "input": "What is positional encoding in transformers and why is it needed?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Positional encoding adds information about the position of each token in the sequence to its embedding. It is needed because the transformer's self-attention mechanism is permutation-invariant and has no inherent notion of token order.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 15,
+    "input": "How does BERT use masked language modeling during pretraining?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "During pretraining, BERT randomly masks a percentage of input tokens and trains the model to predict the original masked tokens using the surrounding context. This forces the model to learn deep bidirectional representations of language.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 16,
+    "input": "What is the vanishing gradient problem?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "The vanishing gradient problem occurs during backpropagation when gradients become extremely small as they are propagated back through many layers or time steps. This prevents earlier layers or earlier time steps from learning effectively, and is especially problematic in deep networks and RNNs.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 17,
+    "input": "What is stochastic gradient descent and how does it differ from batch gradient descent?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Stochastic gradient descent (SGD) updates model parameters using the gradient computed from a single training example at a time. Batch gradient descent computes the gradient over the entire dataset before updating. SGD is faster and can escape local minima but introduces more noise in updates.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 18,
+    "input": "What are hallucinations in large language models?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Hallucinations in LLMs refer to outputs where the model generates confident but factually incorrect, fabricated, or unsupported information. This happens because LLMs generate text based on learned patterns rather than verified facts.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 19,
+    "input": "What is prompt engineering in the context of LLMs?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Prompt engineering is the practice of carefully designing input prompts to guide an LLM toward producing desired outputs. It involves techniques like few-shot examples, chain-of-thought instructions, and explicit formatting constraints to improve response quality without changing model weights.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  },
+  {
+    "id": 20,
+    "input": "What is the leave-one-out cross-validation method?",
+    "system_prompt": "You are a helpful assistant. Answer clearly and concisely based on your knowledge.",
+    "model_output": "",
+    "expected_output": "Leave-one-out cross-validation (LOOCV) is a special case of k-fold cross-validation where k equals the number of samples. Each iteration uses a single sample as the validation set and the rest as training data. It is computationally expensive but produces a nearly unbiased estimate of model performance.",
+    "criteria": ["correctness", "faithfulness", "completeness", "instruction_following", "conciseness"]
+  }
+]
