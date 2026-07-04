@@ -1,10 +1,10 @@
 # Web Framework & Server
-fastapi~=0.115.0          # Allows 0.115.x, blocks a breaking 0.116.0 or 1.0.0
+fastapi~=0.115.0
 uvicorn[standard]~=0.30.0
 
 # LLM & AI Ecosystem
-google-genai~=2.10.0            
-langchain-core~=1.4.0     # Allows 1.4.x, blocks 2.0.0
+openai~=1.82.0
+tiktoken~=0.9.0
 langchain-text-splitters~=1.1.0
 chromadb~=1.5.0
 
