@@ -7,7 +7,7 @@ from openai import OpenAI
 
 sys.path.insert(0, str(Path(__file__).parent))
 from config import OPENAI_API_KEY, JUDGE_MODEL, GENERATOR_MODEL, JUDGE_TEMPERATURE
-from judge.judge import judge, generate, _parse_verdict
+from judge import judge, generate, _parse_verdict
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 

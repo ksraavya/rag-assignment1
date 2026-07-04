@@ -1,0 +1,116 @@
+{
+  "n": 10,
+  "v1_mean_score": 0.962,
+  "v2_mean_score": 0.888,
+  "v1_pass_rate": 1.0,
+  "v2_pass_rate": 0.9,
+  "v1_avg_spread": 0.076,
+  "v2_avg_spread": 0.1031,
+  "v2_wins": 7,
+  "v1_wins": 2,
+  "ties": 1,
+  "winner": "v2",
+  "winner_reason": "higher average score spread \u2014 better discrimination between criteria",
+  "cases": [
+    {
+      "case_id": 1,
+      "v1_overall": 0.96,
+      "v2_overall": 0.66,
+      "v1_pass": true,
+      "v2_pass": false,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.10198039027185571,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 2,
+      "v1_overall": 0.96,
+      "v2_overall": 0.94,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.12000000000000002,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 3,
+      "v1_overall": 0.96,
+      "v2_overall": 0.82,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.1469693845669907,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 4,
+      "v1_overall": 0.96,
+      "v2_overall": 0.82,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.07483314773547885,
+      "case_winner": "v1"
+    },
+    {
+      "case_id": 5,
+      "v1_overall": 0.96,
+      "v2_overall": 0.94,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.12000000000000002,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 6,
+      "v1_overall": 0.96,
+      "v2_overall": 0.94,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.12000000000000002,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 7,
+      "v1_overall": 0.96,
+      "v2_overall": 0.94,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.07999999999999999,
+      "case_winner": "tie"
+    },
+    {
+      "case_id": 8,
+      "v1_overall": 0.96,
+      "v2_overall": 0.94,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.12000000000000002,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 9,
+      "v1_overall": 0.96,
+      "v2_overall": 0.88,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.07999999999999999,
+      "v2_spread": 0.1469693845669907,
+      "case_winner": "v2"
+    },
+    {
+      "case_id": 10,
+      "v1_overall": 0.98,
+      "v2_overall": 1.0,
+      "v1_pass": true,
+      "v2_pass": true,
+      "v1_spread": 0.039999999999999994,
+      "v2_spread": 0.0,
+      "case_winner": "v1"
+    }
+  ]
+}

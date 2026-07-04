@@ -1,13 +1,19 @@
 import json
-import sys
 import time
+import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-from judge.judge    import run_case
-from judge.bias     import check_position_bias, check_verbosity_bias, check_sycophancy_bias, self_enhancement_note
-from judge.validate import check_test_retest, check_adversarial_probes, check_gold_agreement
-from judge.compare  import run_ab_comparison
+# add project root AND judge/ to path
+root = Path(__file__).parent.parent
+judge_dir = Path(__file__).parent
+sys.path.insert(0, str(root))
+sys.path.insert(0, str(judge_dir))
+
+# now import directly by module name, not as package
+from judge import run_case
+from bias import check_position_bias, check_verbosity_bias, check_sycophancy_bias, self_enhancement_note
+from validate import check_test_retest, check_adversarial_probes, check_gold_agreement
+from compare import run_ab_comparison
 
 RESULTS_DIR = Path("./judge_data/results")
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)

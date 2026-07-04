@@ -1,0 +1,203 @@
+{
+  "test_retest_consistency": {
+    "flip_rate": 0.2,
+    "avg_delta": 0.04,
+    "flips": 1,
+    "n": 5,
+    "cases": [
+      {
+        "case_id": 1,
+        "score_run1": 0.68,
+        "score_run2": 0.72,
+        "pass_run1": false,
+        "pass_run2": true,
+        "flipped": true,
+        "score_delta": 0.04
+      },
+      {
+        "case_id": 2,
+        "score_run1": 0.88,
+        "score_run2": 0.94,
+        "pass_run1": true,
+        "pass_run2": true,
+        "flipped": false,
+        "score_delta": 0.06
+      },
+      {
+        "case_id": 3,
+        "score_run1": 0.92,
+        "score_run2": 0.82,
+        "pass_run1": true,
+        "pass_run2": true,
+        "flipped": false,
+        "score_delta": 0.1
+      },
+      {
+        "case_id": 4,
+        "score_run1": 0.88,
+        "score_run2": 0.88,
+        "pass_run1": true,
+        "pass_run2": true,
+        "flipped": false,
+        "score_delta": 0.0
+      },
+      {
+        "case_id": 5,
+        "score_run1": 0.88,
+        "score_run2": 0.88,
+        "pass_run1": true,
+        "pass_run2": true,
+        "flipped": false,
+        "score_delta": 0.0
+      }
+    ]
+  },
+  "adversarial_probes": {
+    "accuracy": 1.0,
+    "correct": 4,
+    "n": 4,
+    "cases": [
+      {
+        "type": "verbose_but_wrong",
+        "case_id": 1,
+        "overall": 0.06,
+        "correctness": 0.0,
+        "passed": false,
+        "expected_pass": false,
+        "judge_correct": true,
+        "rationale": {
+          "correctness": "The model output incorrectly defines RAG and attributes it to the wrong problem and context.",
+          "faithfulness": "The model output is not faithful to the expected output as it provides an entirely different and incorrect explanation.",
+          "completeness": "The model output does not cover any of the key points from the expected output.",
+          "instruction_following": "The model output does not follow the style or format of the expected output.",
+          "conciseness": "While the response is concise, it is concise in delivering incorrect information."
+        }
+      },
+      {
+        "type": "terse_but_correct",
+        "case_id": 1,
+        "overall": 0.94,
+        "correctness": 1.0,
+        "passed": true,
+        "expected_pass": true,
+        "judge_correct": true,
+        "rationale": {
+          "correctness": "The model output correctly defines RAG and its purpose.",
+          "faithfulness": "The model output is mostly faithful but omits the aspect of outdated answers.",
+          "completeness": "The model output covers the hallucination problem but misses the outdated answers aspect.",
+          "instruction_following": "The model output follows the expected style and format.",
+          "conciseness": "The model output is concise and to the point."
+        }
+      },
+      {
+        "type": "verbose_but_wrong",
+        "case_id": 6,
+        "overall": 0.16,
+        "correctness": 0.0,
+        "passed": false,
+        "expected_pass": false,
+        "judge_correct": true,
+        "rationale": {
+          "correctness": "The model output contains incorrect information about gradient descent, confusing it with Bayesian inference techniques.",
+          "faithfulness": "The model output does not align with the expected output, as it describes a different concept entirely.",
+          "completeness": "The model output fails to address any of the key points about gradient descent as an optimization algorithm.",
+          "instruction_following": "The model output does not follow the expected style or format, but it does attempt to provide a detailed explanation.",
+          "conciseness": "The model output is unnecessarily verbose and includes irrelevant information."
+        }
+      },
+      {
+        "type": "terse_but_correct",
+        "case_id": 6,
+        "overall": 0.98,
+        "correctness": 1.0,
+        "passed": true,
+        "expected_pass": true,
+        "judge_correct": true,
+        "rationale": {
+          "correctness": "The model output accurately describes gradient descent and its purpose.",
+          "faithfulness": "The model output is fully grounded in the expected output.",
+          "completeness": "The model output covers all key points but lacks the explicit mention of 'optimization algorithm'.",
+          "instruction_following": "The model output follows the style and format of the expected output.",
+          "conciseness": "The model output is appropriately brief and retains all necessary information."
+        }
+      }
+    ]
+  },
+  "gold_agreement": {
+    "agreement_rate": 1.0,
+    "cohens_kappa": 1.0,
+    "n": 10,
+    "cases": [
+      {
+        "case_id": 1,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.4667,
+        "overall": 0.72
+      },
+      {
+        "case_id": 2,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.4615,
+        "overall": 0.94
+      },
+      {
+        "case_id": 3,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.6757,
+        "overall": 0.82
+      },
+      {
+        "case_id": 4,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.5938,
+        "overall": 0.86
+      },
+      {
+        "case_id": 5,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.6923,
+        "overall": 0.94
+      },
+      {
+        "case_id": 6,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.8889,
+        "overall": 0.94
+      },
+      {
+        "case_id": 7,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.6562,
+        "overall": 0.82
+      },
+      {
+        "case_id": 8,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.6579,
+        "overall": 0.94
+      },
+      {
+        "case_id": 9,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.5938,
+        "overall": 0.82
+      },
+      {
+        "case_id": 10,
+        "judge_pass": true,
+        "gold_pass": true,
+        "overlap": 0.76,
+        "overall": 1.0
+      }
+    ]
+  }
+}

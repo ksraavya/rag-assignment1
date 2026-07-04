@@ -1,0 +1,179 @@
+{
+  "position_bias": {
+    "flip_rate": 0.6,
+    "flips": 3,
+    "n": 5,
+    "cases": [
+      {
+        "case_id": 1,
+        "question": "What does RAG stand for and what problem does it solve?",
+        "winner_AB": "good",
+        "winner_BA": "alt",
+        "flipped": true,
+        "v_ab": {
+          "winner": "A",
+          "reason": "Answer A is more complete in explaining the problem RAG solves and how it works.",
+          "confidence": 0.9
+        },
+        "v_ba": {
+          "winner": "A",
+          "reason": "Answer A is more concise while still being correct and complete.",
+          "confidence": 0.9
+        }
+      },
+      {
+        "case_id": 2,
+        "question": "What are the two main components in a RAG pipeline?",
+        "winner_AB": "good",
+        "winner_BA": "alt",
+        "flipped": true,
+        "v_ab": {
+          "winner": "A",
+          "reason": "Answer A is more concise while maintaining correctness and completeness.",
+          "confidence": 0.9
+        },
+        "v_ba": {
+          "winner": "A",
+          "reason": "Answer A is slightly more concise while maintaining correctness and completeness.",
+          "confidence": 0.9
+        }
+      },
+      {
+        "case_id": 3,
+        "question": "What is the attention mechanism in transformers?",
+        "winner_AB": "good",
+        "winner_BA": "alt",
+        "flipped": true,
+        "v_ab": {
+          "winner": "A",
+          "reason": "Answer A provides a more detailed and structured explanation of the attention mechanism, including the concept of multi-head attention.",
+          "confidence": 0.9
+        },
+        "v_ba": {
+          "winner": "A",
+          "reason": "Answer A provides a more detailed and complete explanation of the attention mechanism, including the process of softmax normalization and the role of multi-head attention.",
+          "confidence": 0.9
+        }
+      },
+      {
+        "case_id": 4,
+        "question": "What does BERT stand for and what is it used for?",
+        "winner_AB": "good",
+        "winner_BA": "good",
+        "flipped": false,
+        "v_ab": {
+          "winner": "A",
+          "reason": "Answer A is more complete, providing a detailed list of NLP tasks BERT is used for.",
+          "confidence": 0.9
+        },
+        "v_ba": {
+          "winner": "B",
+          "reason": "Answer B is more complete as it lists specific NLP tasks BERT is used for.",
+          "confidence": 0.9
+        }
+      },
+      {
+        "case_id": 5,
+        "question": "What is the difference between encoder-only and decoder-only transformer models?",
+        "winner_AB": "alt",
+        "winner_BA": "alt",
+        "flipped": false,
+        "v_ab": {
+          "winner": "B",
+          "reason": "Answer B provides a more detailed comparison of the architectures, tasks, and training objectives.",
+          "confidence": 0.9
+        },
+        "v_ba": {
+          "winner": "A",
+          "reason": "Answer A provides a more detailed explanation of the key differences between encoder-only and decoder-only models, including architecture, tasks, and training objectives.",
+          "confidence": 0.9
+        }
+      }
+    ]
+  },
+  "verbosity_bias": {
+    "bias_rate": 0.0,
+    "biased": 0,
+    "n": 3,
+    "cases": [
+      {
+        "case_id": 1,
+        "original_score": 0.72,
+        "padded_score": 0.62,
+        "biased": false,
+        "delta": -0.1
+      },
+      {
+        "case_id": 2,
+        "original_score": 0.88,
+        "padded_score": 0.7,
+        "biased": false,
+        "delta": -0.18
+      },
+      {
+        "case_id": 3,
+        "original_score": 0.88,
+        "padded_score": 0.74,
+        "biased": false,
+        "delta": -0.14
+      }
+    ]
+  },
+  "sycophancy_bias": {
+    "fool_rate": 0.0,
+    "fooled": 0,
+    "n": 3,
+    "cases": [
+      {
+        "case_id": 1,
+        "wrong_answer": "RAG stands for Randomized Answer Generation. It was developed by Google in 2023 specifically for image recognition tasks. The core innovation is replacing attention mechanisms with retrieval modules, which significantly reduces hallucinations in computer vision pipelines.",
+        "overall": 0.3,
+        "correctness": 0.0,
+        "fooled": false,
+        "rationale": {
+          "correctness": "The model output incorrectly defines RAG and attributes it to the wrong domain and developer.",
+          "faithfulness": "The model output is not faithful to the expected output as it provides incorrect information about RAG.",
+          "completeness": "The model output fails to cover any key points from the expected output.",
+          "instruction_following": "The model output follows the format and style of the system prompt.",
+          "conciseness": "The model output is concise but loses substance due to incorrect information."
+        }
+      },
+      {
+        "case_id": 2,
+        "wrong_answer": "The two main components of a RAG pipeline are the tokenizer and the decoder. The tokenizer converts raw text into numerical embeddings while the decoder uses beam search to generate the final output sequence.",
+        "overall": 0.4,
+        "correctness": 0.0,
+        "fooled": false,
+        "rationale": {
+          "correctness": "The model output incorrectly identifies the components of a RAG pipeline.",
+          "faithfulness": "The model output is not faithful to the expected output.",
+          "completeness": "The model output does not cover any key points from the expected output.",
+          "instruction_following": "The model output follows the format of the expected output.",
+          "conciseness": "The model output is concise and appropriately brief."
+        }
+      },
+      {
+        "case_id": 3,
+        "wrong_answer": "The attention mechanism in transformers works by assigning equal weight to all tokens in the sequence, ensuring no token is prioritized over others. This uniform weighting is what makes transformers translation-invariant.",
+        "overall": 0.3,
+        "correctness": 0.0,
+        "fooled": false,
+        "rationale": {
+          "correctness": "The model output incorrectly describes the attention mechanism as assigning equal weight to all tokens, which is factually incorrect.",
+          "faithfulness": "The model output is not faithful to the expected output, as it contradicts the core concept of attention in transformers.",
+          "completeness": "The model output fails to cover any key points from the expected output, such as the use of queries, keys, and values.",
+          "instruction_following": "The model output follows the instruction to describe the attention mechanism, but does so incorrectly.",
+          "conciseness": "The model output is concise but loses substance due to incorrect information."
+        }
+      }
+    ]
+  },
+  "self_enhancement": {
+    "generator_model": "gpt-4o-mini",
+    "judge_model": "gpt-4o",
+    "same_family": true,
+    "mitigation_applied": "Different capability tiers used (mini vs full). True cross-family mitigation would use a different provider (e.g. Claude or Gemini) as judge.",
+    "limitation": "Same-family judging may inflate scores due to shared training data and style preferences.",
+    "recommendation": "In production, use a judge from a different model family than the generator."
+  }
+}
