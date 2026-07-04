@@ -37,9 +37,15 @@ def load_html(path: Path) -> str:
     soup = BeautifulSoup(
         path.read_text(encoding="utf-8", errors="ignore"), "html.parser"
     )
-    for tag in soup(["script", "style", "nav", "footer", "header"]):
+    # target only the main article body
+    article = soup.find("div", {"id": "mw-content-text"})
+    if not article:
+        article = soup  # fallback
+    for tag in article(["script", "style", "nav", "footer",
+                         "header", "table", "sup", ".reflist",
+                         ".navbox", ".sistersitebox"]):
         tag.decompose()
-    return soup.get_text(separator="\n", strip=True)
+    return article.get_text(separator="\n", strip=True)
 
 def load_text(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="ignore")
@@ -96,5 +102,5 @@ def ingest_dir(docs_dir: str = "../docs"):
 
 # ── entry point ────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    docs_path = sys.argv[1] if len(sys.argv) > 1 else "../docs"
+    docs_path = sys.argv[1] if len(sys.argv) > 1 else "./docs"
     ingest_dir(docs_path)
