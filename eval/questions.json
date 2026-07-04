@@ -3,120 +3,120 @@
     "id": 1,
     "question": "What does RAG stand for and what problem does it solve?",
     "gold_answer": "RAG stands for Retrieval-Augmented Generation. It solves the problem of LLMs producing outdated or hallucinated answers by retrieving relevant documents at query time and grounding the generation in that retrieved context.",
-    "source": "Retrieval-Augmented Generation"
+    "source": "retrieval-augmented-generation"
   },
   {
     "id": 2,
     "question": "What are the two main components in a RAG pipeline?",
     "gold_answer": "The two main components are a retriever, which fetches relevant documents or passages from a knowledge base, and a generator (LLM), which produces an answer conditioned on the retrieved context.",
-    "source": "Retrieval-Augmented Generation"
+    "source": "retrieval-augmented-generation"
   },
   {
     "id": 3,
     "question": "What is the attention mechanism in transformers?",
     "gold_answer": "The attention mechanism allows a model to weigh the relevance of different tokens in a sequence when producing a representation for each token. In transformers, scaled dot-product attention computes a weighted sum of values, where weights are derived from the dot product of queries and keys.",
-    "source": "Attention mechanism"
+    "source": "attention-mechanism"
   },
   {
     "id": 4,
     "question": "What does BERT stand for and what is it used for?",
     "gold_answer": "BERT stands for Bidirectional Encoder Representations from Transformers. It is a pretrained language model used for NLP tasks such as question answering, named entity recognition, and sentence classification by fine-tuning on task-specific data.",
-    "source": "BERT (language model)"
+    "source": "bert"
   },
   {
     "id": 5,
     "question": "What is the difference between encoder-only and decoder-only transformer models?",
     "gold_answer": "Encoder-only models like BERT process the full input bidirectionally and are used for understanding tasks. Decoder-only models like GPT generate text autoregressively, attending only to previous tokens, and are used for text generation tasks.",
-    "source": "Transformer (deep learning)"
+    "source": "transformer"
   },
   {
     "id": 6,
     "question": "What is gradient descent and what is it used for in ML?",
     "gold_answer": "Gradient descent is an optimization algorithm that iteratively updates model parameters in the direction of the negative gradient of the loss function. It is used to minimize the loss and train machine learning models.",
-    "source": "Gradient descent"
+    "source": "gradient-descent"
   },
   {
     "id": 7,
     "question": "What is overfitting and how does it affect model generalization?",
     "gold_answer": "Overfitting occurs when a model learns the training data too well, including its noise and random fluctuations, resulting in poor performance on unseen data. It reduces the model's ability to generalize beyond the training set.",
-    "source": "Overfitting"
+    "source": "overfitting"
   },
   {
     "id": 8,
     "question": "What is k-fold cross-validation?",
     "gold_answer": "K-fold cross-validation is a technique where the dataset is split into k equal folds. The model is trained on k-1 folds and validated on the remaining fold, repeated k times so each fold serves as the validation set once. The results are averaged to estimate model performance.",
-    "source": "Cross-validation (statistics)"
+    "source": "cross-validation"
   },
   {
     "id": 9,
     "question": "How does Word2vec represent words?",
     "gold_answer": "Word2vec represents words as dense vector embeddings in a continuous vector space, where semantically similar words are placed close together. These vectors are learned by training a shallow neural network to predict words from context or context from words.",
-    "source": "Word2vec"
+    "source": "word2vec"
   },
   {
     "id": 10,
     "question": "What are the two training approaches used in Word2vec?",
     "gold_answer": "The two training approaches are CBOW (Continuous Bag of Words), which predicts a target word from its surrounding context words, and Skip-gram, which predicts surrounding context words given a target word.",
-    "source": "Word2vec"
+    "source": "word2vec"
   },
   {
     "id": 11,
     "question": "What is a recurrent neural network and what makes it different from a feedforward network?",
     "gold_answer": "A recurrent neural network (RNN) is a neural network that has connections forming cycles, allowing information to persist across time steps. Unlike feedforward networks, RNNs maintain a hidden state that captures information from previous inputs, making them suited for sequential data.",
-    "source": "Recurrent neural network"
+    "source": "recurrent-neural-network"
   },
   {
     "id": 12,
     "question": "What problem do LSTMs solve compared to vanilla RNNs?",
     "gold_answer": "LSTMs (Long Short-Term Memory networks) solve the vanishing gradient problem that affects vanilla RNNs. They use gating mechanisms (input, forget, and output gates) to control information flow, allowing them to learn long-range dependencies in sequences.",
-    "source": "Recurrent neural network"
+    "source": "recurrent-neural-network"
   },
   {
     "id": 13,
     "question": "What is self-attention and why is it useful?",
     "gold_answer": "Self-attention is a mechanism where each token in a sequence attends to all other tokens in the same sequence to compute its representation. It is useful because it captures dependencies between tokens regardless of their distance, unlike RNNs which struggle with long-range dependencies.",
-    "source": "Attention mechanism"
+    "source": "attention-mechanism"
   },
   {
     "id": 14,
     "question": "What is positional encoding in transformers and why is it needed?",
     "gold_answer": "Positional encoding adds information about the position of each token in the sequence to its embedding. It is needed because the transformer's self-attention mechanism is permutation-invariant and has no inherent notion of token order.",
-    "source": "Transformer (deep learning)"
+    "source": "transformer"
   },
   {
     "id": 15,
     "question": "How does BERT use masked language modeling during pretraining?",
     "gold_answer": "During pretraining, BERT randomly masks a percentage of input tokens and trains the model to predict the original masked tokens using the surrounding context. This forces the model to learn deep bidirectional representations of language.",
-    "source": "BERT (language model)"
+    "source": "bert"
   },
   {
     "id": 16,
     "question": "What is the vanishing gradient problem?",
     "gold_answer": "The vanishing gradient problem occurs during backpropagation when gradients become extremely small as they are propagated back through many layers or time steps. This prevents earlier layers or earlier time steps from learning effectively, and is especially problematic in deep networks and RNNs.",
-    "source": "Recurrent neural network"
+    "source": "recurrent-neural-network"
   },
   {
     "id": 17,
     "question": "What is stochastic gradient descent and how does it differ from batch gradient descent?",
     "gold_answer": "Stochastic gradient descent (SGD) updates model parameters using the gradient computed from a single training example at a time. Batch gradient descent computes the gradient over the entire dataset before updating. SGD is faster and can escape local minima but introduces more noise in updates.",
-    "source": "Gradient descent"
+    "source": "gradient-descent"
   },
   {
     "id": 18,
     "question": "What are hallucinations in large language models?",
     "gold_answer": "Hallucinations in LLMs refer to outputs where the model generates confident but factually incorrect, fabricated, or unsupported information. This happens because LLMs generate text based on learned patterns rather than verified facts.",
-    "source": "Large language model"
+    "source": "large-language-model"
   },
   {
     "id": 19,
     "question": "What is prompt engineering in the context of LLMs?",
     "gold_answer": "Prompt engineering is the practice of carefully designing input prompts to guide an LLM toward producing desired outputs. It involves techniques like few-shot examples, chain-of-thought instructions, and explicit formatting constraints to improve response quality without changing model weights.",
-    "source": "Large language model"
+    "source": "large-language-model"
   },
   {
     "id": 20,
     "question": "What is the leave-one-out cross-validation method?",
     "gold_answer": "Leave-one-out cross-validation (LOOCV) is a special case of k-fold cross-validation where k equals the number of samples. Each iteration uses a single sample as the validation set and the rest as training data. It is computationally expensive but produces a nearly unbiased estimate of model performance.",
-    "source": "Cross-validation (statistics)"
+    "source": "cross-validation"
   }
 ]
